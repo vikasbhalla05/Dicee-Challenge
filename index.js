@@ -11,3 +11,16 @@ var randomDiceImg2="dice"+randomNumber2+".png";
 var randomImgSrc2="images/"+randomDiceImg2;
 var Img2=document.querySelectorAll("img")[1];
 Img2.setAttribute("src",randomImgSrc2);
+
+// showing results
+if(randomNumber1==randomNumber2){
+    document.querySelector("h1").textContent="Draw Both Players have half 😉";
+}
+else if(randomNumber1>randomNumber2){
+    document.querySelector("h1").textContent="Player 1 Wins!";
+    document.querySelectorAll(".dice>p")[0].textContent="Player 1 🚩";
+}
+else{
+    document.querySelector("h1").textContent="Player 2 Wins!";
+    document.querySelectorAll(".dice>p")[1].textContent="Player 2 🚩";
+}
